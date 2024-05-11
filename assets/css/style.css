@@ -14,19 +14,19 @@ body {
     background-color: #f4f4f4;
 }
 #background {
-    position: relative;
+    position: fixed;
 }
 .game-container {
     text-align: center;
     background: #41e6d2;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: fixed;  
-    top: 65%;  
-    left: 50%;  
-    transform: translate(-50%, -20%);  
-    width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 680px;
 }
 button {
     margin: 10px;
@@ -44,4 +44,14 @@ button:hover {
 
 #scoreboard p {
     font-size: 18px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #41e6d2;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    margin-top: 1000px;
 }
