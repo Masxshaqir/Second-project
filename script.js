@@ -31,9 +31,10 @@ function determineWinner(userChoice, computerChoice) {
     (userChoice === 'paper' && computerChoice === 'rock') ||
     (userChoice === 'scissors' && computerChoice === 'paper')) {
     wins++;
-    return "You win!";
+    return "WoW You win!";
 } else {
     losses++;
-    return "You lose!";
+    return "You lose try Again!";
 }
+
 }
