@@ -27,4 +27,13 @@ function determineWinner(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
         return "It's a draw!";
     }
- 
+    if ((userChoice === 'rock' && computerChoice === 'scissors') ||
+    (userChoice === 'paper' && computerChoice === 'rock') ||
+    (userChoice === 'scissors' && computerChoice === 'paper')) {
+    wins++;
+    return "You win!";
+} else {
+    losses++;
+    return "You lose!";
+}
+}
