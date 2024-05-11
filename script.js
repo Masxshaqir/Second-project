@@ -22,3 +22,9 @@ function getComputerChoice() {
     const index = Math.floor(Math.random() * choices.length);
     return choices[index];
 }
+
+function determineWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        return "It's a draw!";
+    }
+ 
