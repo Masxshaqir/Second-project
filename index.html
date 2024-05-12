@@ -20,6 +20,14 @@
             <p>Losses: <span id="loss">0</span></p>
             <p>Tries Left: <span id="tries-left">6</span></p>
         </div>
+        <div id="difficulty-selector">
+            <label for="difficulty">Choose Difficulty:</label>
+            <select id="difficulty" onchange="setDifficulty()">
+                <option value="1">Easy</option>
+                <option value="2">Medium</option>
+                <option value="3">Hard</option>
+            </select>
+        </div>
         <div id="choices">
             <button onclick="play('rock')">Rock</button>
             <button onclick="play('paper')">Paper</button>
