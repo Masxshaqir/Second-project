@@ -1,6 +1,7 @@
 let wins = 0;
 let losses = 0;
 let triesLeft = 5;
+let difficultyLevel = 1;  
 
 function play(userChoice) {
     if (triesLeft === 0) {
@@ -19,7 +20,7 @@ function play(userChoice) {
 
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
-    const index = Math.floor(Math.random() * choices.length);
+    let index = Math.floor(Math.random() * choices.length);
     return choices[index];
 }
 
@@ -28,13 +29,17 @@ function determineWinner(userChoice, computerChoice) {
         return "It's a draw!";
     }
     if ((userChoice === 'rock' && computerChoice === 'scissors') ||
-    (userChoice === 'paper' && computerChoice === 'rock') ||
-    (userChoice === 'scissors' && computerChoice === 'paper')) {
-    wins++;
-    return "WoW You win!";
-} else {
-    losses++;
-    return "You lose try Again!";
+        (userChoice === 'paper' && computerChoice === 'rock') ||
+        (userChoice === 'scissors' && computerChoice === 'paper')) {
+        wins++;
+        return "WoW You win!";
+    } else {
+        losses++;
+        return "You lose try Again!";
+    }
 }
 
+function setDifficulty() {
+    const select = document.getElementById('difficulty');
+    difficultyLevel = parseInt(select.value, 10);   
 }
