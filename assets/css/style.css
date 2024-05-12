@@ -111,6 +111,16 @@ button:hover {
         width: 90%;  
         margin: 2px 0;  
     }
+    #difficulty-selector select {
+        padding: 5px 10px;
+        font-size: 5px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        background-color: white;
+        cursor: pointer;
+        outline: none;
+    }
+
 }
 
 @media only screen and (max-width: 430px) {
@@ -138,7 +148,15 @@ button:hover {
         width: 100%;  
         margin: 5px 0;  
     }
-   
+    #difficulty-selector select {
+        padding: 8px 16px;
+        font-size: 10px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        background-color: white;
+        cursor: pointer;
+        outline: none;
+    }
 }
 
 @media only screen and (min-width: 540px) {
