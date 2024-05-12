@@ -82,6 +82,11 @@ button:hover {
     outline: none; 
 }
 
+#difficulty-selector select:hover {
+    border-color: #3014e6; /* Darker border on hover */
+}
+
+
 @media only screen and (max-width: 280px) {
     body {
         font-size: 12px;  
