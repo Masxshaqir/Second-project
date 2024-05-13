@@ -1,6 +1,6 @@
 let wins = 0;
 let losses = 0;
-let triesLeft = 5;
+let triesLeft = 6;
 let difficultyLevel = 1;  
 
 function play(userChoice) {
