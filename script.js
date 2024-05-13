@@ -12,6 +12,10 @@ function play(userChoice) {
     const computerChoice = getComputerChoice();
     const result = determineWinner(userChoice, computerChoice);
 
+    
+    document.getElementById('player-choice').children[0].src = `assets/images/${userChoice}.webp`;
+    document.getElementById('computer-choice').children[0].src = `assets/images/${computerChoice}.webp`;
+
     document.getElementById('result').innerText = `You chose ${userChoice}. Computer chose ${computerChoice}. ${result}`;
     document.getElementById('win').innerText = wins;
     document.getElementById('loss').innerText = losses;
