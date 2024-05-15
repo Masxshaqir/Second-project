@@ -1,7 +1,10 @@
+/* jshint esversion: 6 */ 
 let wins = 0;
 let losses = 0;
 let triesLeft = 6;
 let difficultyLevel = 1;  
+
+
 
 function play(userChoice) {
     if (triesLeft === 0) {
@@ -47,3 +50,4 @@ function setDifficulty() {
     const select = document.getElementById('difficulty');
     difficultyLevel = parseInt(select.value, 10);   
 }
+
