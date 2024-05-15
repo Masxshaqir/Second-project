@@ -18,7 +18,7 @@ function play(userChoice) {
   document.getElementById('player-choice').children[0].src = `assets/images/${userChoice}.webp`;
   document.getElementById('computer-choice').children[0].src = `assets/images/${computerChoice}.webp`;
 
-  updateResult(`You chose ${userChoice}. Computer chose ${computerChoice}. ${resultText}`);
+  updateResult(userChoice, computerChoice, resultText);
   document.getElementById('win').innerText = wins;
   document.getElementById('loss').innerText = losses;
   document.getElementById('tries-left').innerText = --triesLeft;
@@ -28,8 +28,9 @@ function play(userChoice) {
   }
 }
 
-function updateResult(text) {
-  resultDiv.innerText = text;
+function updateResult(userChoice, computerChoice, resultText) {
+  resultDiv.innerText = `You chose ${userChoice}. Computer chose ${computerChoice}. ${resultText}`;
+  resultDiv.style.visibility = "visible"; 
 }
 
 function endGame() {
@@ -55,7 +56,7 @@ function determineWinner(userChoice, computerChoice) {
         return "WoW You win!";
     } else {
         losses++;
-        return "You lose try Again!";
+        return "You lose, try again!";
     }
 }
 
