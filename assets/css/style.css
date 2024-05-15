@@ -28,6 +28,10 @@ body {
     transform: translate(-50%, -20%);
     width: 680px;
 }
+.choices {
+  height: 100px;
+  width: 100px;
+}
 button {
     margin: 10px;
     padding: 10px 20px;
@@ -46,9 +50,9 @@ button:hover {
     font-size: 18px;
 }
 #player-choice img, #computer-choice img {
-    width: 100px;  /* or whatever size fits your design */
+    width: 100px;  
     height: 100px;
-    object-fit: contain;  /* Keeps the aspect ratio of the images */
+    object-fit: contain;  
 }
 
 
@@ -89,7 +93,7 @@ button:hover {
 }
 
 #difficulty-selector select:hover {
-    border-color: #3014e6; /* Darker border on hover */
+    border-color: #3014e6; 
 }
 
 

@@ -36,13 +36,16 @@
         </div>
 
         <div id="player-choice">
-            <img src="assets/images/default.webp" alt="Your Choice" style="height: 100px; width: 100px;">
+            <img src="assets/images/default.webp" alt="Your Choice" class="choices">
         </div>
         <div id="computer-choice">
-            <img src="assets/images/default.webp" alt="Computer's Choice" style="height: 100px; width: 100px;">
+            <img src="assets/images/default.webp" alt="Computer's Choice" class="choices">
         </div>
 
-        <div id="result"></div>
+        <div id="result">
+          <h3>Game over! Reload to play again</h3>
+          <button onclick="window.location.reload();">New Game</button>
+        </div>
     </div>
     <footer class="footer" >
         <p>Copyright © Marcus Shaqir </p>

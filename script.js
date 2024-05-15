@@ -2,32 +2,45 @@
 let wins = 0;
 let losses = 0;
 let triesLeft = 6;
-let difficultyLevel = 1;  
+let difficultyLevel = 1;
 
-
+const resultDiv = document.getElementById('result');
+resultDiv.style.visibility = "hidden"; 
 
 function play(userChoice) {
-    if (triesLeft === 0) {
-        document.getElementById('result').innerText = 'Game over! Reload to play again';
-        return;
-    }
+  if (triesLeft === 0) {
+      return; 
+  }
 
-    const computerChoice = getComputerChoice();
-    const result = determineWinner(userChoice, computerChoice);
+  const computerChoice = getComputerChoice();
+  const resultText = determineWinner(userChoice, computerChoice);
 
-    
-    document.getElementById('player-choice').children[0].src = `assets/images/${userChoice}.webp`;
-    document.getElementById('computer-choice').children[0].src = `assets/images/${computerChoice}.webp`;
+  document.getElementById('player-choice').children[0].src = `assets/images/${userChoice}.webp`;
+  document.getElementById('computer-choice').children[0].src = `assets/images/${computerChoice}.webp`;
 
-    document.getElementById('result').innerText = `You chose ${userChoice}. Computer chose ${computerChoice}. ${result}`;
-    document.getElementById('win').innerText = wins;
-    document.getElementById('loss').innerText = losses;
-    document.getElementById('tries-left').innerText = --triesLeft;
+  updateResult(`You chose ${userChoice}. Computer chose ${computerChoice}. ${resultText}`);
+  document.getElementById('win').innerText = wins;
+  document.getElementById('loss').innerText = losses;
+  document.getElementById('tries-left').innerText = --triesLeft;
+
+  if (triesLeft === 0) {
+      endGame();
+  }
+}
+
+function updateResult(text) {
+  resultDiv.innerText = text;
+}
+
+function endGame() {
+  resultDiv.innerHTML = '<h3>Game over! Reload to play again</h3>' + 
+                        '<button onclick="window.location.reload();">New Game</button>';
+  resultDiv.style.visibility = "visible"; 
 }
 
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
-    let index = Math.floor(Math.random() * choices.length);
+    let index = Math.floor(Math.random() * 3);
     return choices[index];
 }
 
@@ -50,4 +63,3 @@ function setDifficulty() {
     const select = document.getElementById('difficulty');
     difficultyLevel = parseInt(select.value, 10);   
 }
-
