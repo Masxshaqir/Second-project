@@ -103,11 +103,12 @@ button:hover {
     }
 
     .game-container {
-        padding: 10px;
+        padding: 5px;
         margin: 10px;
-        width: 175px;
-        top: 30%;
+        width: 200px;
+        top: 28%;
         left: 48%;
+        bottom: -54%;
     }
 
     .footer {
@@ -174,7 +175,7 @@ button:hover {
         padding: 15px;
         margin: 10px;
         width: 280px;
-        top: 35%;
+        top: 30%;
         left: 48%;
     }
 }
@@ -213,7 +214,8 @@ button:hover {
         padding: 20px;  
         width: 80%;  
         max-width: 640px;  
-        margin: 20px auto;  
+        margin: 20px auto; 
+        top: 30%; 
     }
 
     .footer {
